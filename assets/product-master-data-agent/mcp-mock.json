@@ -1,0 +1,463 @@
+{
+  "servers": {
+    "sap-s4-ce-product-0003": {
+      "mcp_server_name": "sap.mcp/sap_self",
+      "description": "MCP server for the sap_self service.",
+      "tools": {
+        "get_metadata_sap_self": {
+          "description": "Get metadata of the OData service with optional filtering to reduce token consumption.\nReturns the metadata in XML format, which can be used to discover available entities and their properties.\nCall this endpoint every time before you call other tools to ensure understanding of the schema.\nBased on the metadata, you can dynamically create an OData request.\n\nUse filtering parameters to get specific metadata sections. Without parameters, this tool returns the complete XML metadata (which might be huge).\nOnly use the specified enum values for the filtering parameters.\n",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "metadata": "<XML metadata>",
+            "version": "4.0"
+          }
+        },
+        "batch_for_sap_self": {
+          "description": "Execute multiple OData operations in a single batch request using the $batch endpoint. This allows you to combine multiple tool calls into one HTTP request, improving efficiency when performing multiple operations.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {}
+        },
+        "list_product_for_sap_self": {
+          "description": "Retrieve a list of entities from the Product collection in the sap_self service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "results": [
+              {},
+              {}
+            ]
+          }
+        },
+        "get_product_for_sap_self": {
+          "description": "Retrieve a single entity by its key from the Product collection in the sap_self service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {}
+        },
+        "count_product_for_sap_self": {
+          "description": "Get the total count of entities in the Product collection in the sap_self service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "count": 2
+          }
+        },
+        "list_productbasictext_for_sap_self": {
+          "description": "Retrieve a list of entities from the ProductBasicText collection in the sap_self service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "results": [
+              {},
+              {}
+            ]
+          }
+        },
+        "get_productbasictext_for_sap_self": {
+          "description": "Retrieve a single entity by its key from the ProductBasicText collection in the sap_self service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {}
+        },
+        "count_productbasictext_for_sap_self": {
+          "description": "Get the total count of entities in the ProductBasicText collection in the sap_self service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "count": 2
+          }
+        },
+        "list_productdescription_for_sap_self": {
+          "description": "Retrieve a list of entities from the ProductDescription collection in the sap_self service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "results": [
+              {},
+              {}
+            ]
+          }
+        },
+        "get_productdescription_for_sap_self": {
+          "description": "Retrieve a single entity by its key from the ProductDescription collection in the sap_self service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {}
+        },
+        "count_productdescription_for_sap_self": {
+          "description": "Get the total count of entities in the ProductDescription collection in the sap_self service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "count": 2
+          }
+        },
+        "list_productplant_for_sap_self": {
+          "description": "Retrieve a list of entities from the ProductPlant collection in the sap_self service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "results": [
+              {},
+              {}
+            ]
+          }
+        },
+        "get_productplant_for_sap_self": {
+          "description": "Retrieve a single entity by its key from the ProductPlant collection in the sap_self service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {}
+        },
+        "count_productplant_for_sap_self": {
+          "description": "Get the total count of entities in the ProductPlant collection in the sap_self service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "count": 2
+          }
+        },
+        "list_productunitofmeasure_for_sap_self": {
+          "description": "Retrieve a list of entities from the ProductUnitOfMeasure collection in the sap_self service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "results": [
+              {},
+              {}
+            ]
+          }
+        },
+        "get_productunitofmeasure_for_sap_self": {
+          "description": "Retrieve a single entity by its key from the ProductUnitOfMeasure collection in the sap_self service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {}
+        },
+        "count_productunitofmeasure_for_sap_self": {
+          "description": "Get the total count of entities in the ProductUnitOfMeasure collection in the sap_self service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "count": 2
+          }
+        }
+      }
+    },
+    "sap-s4-api-product-srv": {
+      "mcp_server_name": "sap.mcp/api_product_srv",
+      "description": "MCP server for the api_product_srv service.",
+      "tools": {
+        "get_metadata_api_product_srv": {
+          "description": "Get metadata of the OData service with optional filtering to reduce token consumption.\nReturns the metadata in XML format, which can be used to discover available entities and their properties.\nCall this endpoint every time before you call other tools to ensure understanding of the schema.\nBased on the metadata, you can dynamically create an OData request.\n\nUse filtering parameters to get specific metadata sections. Without parameters, this tool returns the complete XML metadata (which might be huge).\nOnly use the specified enum values for the filtering parameters.\n",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "metadata": "<XML metadata>",
+            "version": "4.0"
+          }
+        },
+        "batch_for_api_product_srv": {
+          "description": "Execute multiple OData operations in a single batch request using the $batch endpoint. This allows you to combine multiple tool calls into one HTTP request, improving efficiency when performing multiple operations.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {}
+        },
+        "list_a_product_for_api_product_srv": {
+          "description": "Retrieve a list of entities from the A_Product collection in the api_product_srv service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_api_product_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "results": [
+              {},
+              {}
+            ]
+          }
+        },
+        "get_a_product_for_api_product_srv": {
+          "description": "Retrieve a single entity by its key from the A_Product collection in the api_product_srv service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_api_product_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {}
+        },
+        "count_a_product_for_api_product_srv": {
+          "description": "Get the total count of entities in the A_Product collection in the api_product_srv service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_api_product_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "count": 2
+          }
+        },
+        "list_a_productbasictext_for_api_product_srv": {
+          "description": "Retrieve a list of entities from the A_ProductBasicText collection in the api_product_srv service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_api_product_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "results": [
+              {},
+              {}
+            ]
+          }
+        },
+        "get_a_productbasictext_for_api_product_srv": {
+          "description": "Retrieve a single entity by its key from the A_ProductBasicText collection in the api_product_srv service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_api_product_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {}
+        },
+        "count_a_productbasictext_for_api_product_srv": {
+          "description": "Get the total count of entities in the A_ProductBasicText collection in the api_product_srv service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_api_product_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "count": 2
+          }
+        },
+        "list_a_productdescription_for_api_product_srv": {
+          "description": "Retrieve a list of entities from the A_ProductDescription collection in the api_product_srv service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_api_product_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "results": [
+              {},
+              {}
+            ]
+          }
+        },
+        "get_a_productdescription_for_api_product_srv": {
+          "description": "Retrieve a single entity by its key from the A_ProductDescription collection in the api_product_srv service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_api_product_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {}
+        },
+        "count_a_productdescription_for_api_product_srv": {
+          "description": "Get the total count of entities in the A_ProductDescription collection in the api_product_srv service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_api_product_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "count": 2
+          }
+        },
+        "list_a_productplant_for_api_product_srv": {
+          "description": "Retrieve a list of entities from the A_ProductPlant collection in the api_product_srv service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_api_product_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "results": [
+              {},
+              {}
+            ]
+          }
+        },
+        "get_a_productplant_for_api_product_srv": {
+          "description": "Retrieve a single entity by its key from the A_ProductPlant collection in the api_product_srv service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_api_product_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {}
+        },
+        "count_a_productplant_for_api_product_srv": {
+          "description": "Get the total count of entities in the A_ProductPlant collection in the api_product_srv service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_api_product_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "count": 2
+          }
+        }
+      }
+    },
+    "sap-s4-api-clfn-product-srv": {
+      "mcp_server_name": "sap.mcp/api_clfn_product_srv",
+      "description": "MCP server for the api_clfn_product_srv service.",
+      "tools": {
+        "get_metadata_api_clfn_product_srv": {
+          "description": "Get metadata of the OData service with optional filtering to reduce token consumption.\nReturns the metadata in XML format, which can be used to discover available entities and their properties.\nCall this endpoint every time before you call other tools to ensure understanding of the schema.\nBased on the metadata, you can dynamically create an OData request.\n\nUse filtering parameters to get specific metadata sections. Without parameters, this tool returns the complete XML metadata (which might be huge).\nOnly use the specified enum values for the filtering parameters.\n",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "metadata": "<XML metadata>",
+            "version": "4.0"
+          }
+        },
+        "batch_for_api_clfn_product_srv": {
+          "description": "Execute multiple OData operations in a single batch request using the $batch endpoint. This allows you to combine multiple tool calls into one HTTP request, improving efficiency when performing multiple operations.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {}
+        },
+        "list_a_clfnproduct_for_api_clfn_product_srv": {
+          "description": "Retrieve a list of entities from the A_ClfnProduct collection in the api_clfn_product_srv service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_api_clfn_product_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "results": [
+              {},
+              {}
+            ]
+          }
+        },
+        "get_a_clfnproduct_for_api_clfn_product_srv": {
+          "description": "Retrieve a single entity by its key from the A_ClfnProduct collection in the api_clfn_product_srv service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_api_clfn_product_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {}
+        },
+        "count_a_clfnproduct_for_api_clfn_product_srv": {
+          "description": "Get the total count of entities in the A_ClfnProduct collection in the api_clfn_product_srv service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_api_clfn_product_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "count": 2
+          }
+        },
+        "list_a_clfnclassforkeydate_for_api_clfn_product_srv": {
+          "description": "Retrieve a list of entities from the A_ClfnClassForKeyDate collection in the api_clfn_product_srv service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_api_clfn_product_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "results": [
+              {},
+              {}
+            ]
+          }
+        },
+        "get_a_clfnclassforkeydate_for_api_clfn_product_srv": {
+          "description": "Retrieve a single entity by its key from the A_ClfnClassForKeyDate collection in the api_clfn_product_srv service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_api_clfn_product_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {}
+        },
+        "count_a_clfnclassforkeydate_for_api_clfn_product_srv": {
+          "description": "Get the total count of entities in the A_ClfnClassForKeyDate collection in the api_clfn_product_srv service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_api_clfn_product_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "count": 2
+          }
+        },
+        "list_a_productdescription_for_api_clfn_product_srv": {
+          "description": "Retrieve a list of entities from the A_ProductDescription collection in the api_clfn_product_srv service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_api_clfn_product_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "results": [
+              {},
+              {}
+            ]
+          }
+        },
+        "get_a_productdescription_for_api_clfn_product_srv": {
+          "description": "Retrieve a single entity by its key from the A_ProductDescription collection in the api_clfn_product_srv service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_api_clfn_product_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {}
+        },
+        "count_a_productdescription_for_api_clfn_product_srv": {
+          "description": "Get the total count of entities in the A_ProductDescription collection in the api_clfn_product_srv service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_api_clfn_product_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "count": 2
+          }
+        }
+      }
+    }
+  },
+  "metadata": {
+    "version": "1.0.0",
+    "created_for_agent": "product-master-data-agent",
+    "mock_mode": true,
+    "deterministic": true,
+    "total_servers": 3,
+    "total_tools": 42,
+    "generated_from": [
+      "translation.json"
+    ],
+    "generation_date": "2026-10-26"
+  }
+}
